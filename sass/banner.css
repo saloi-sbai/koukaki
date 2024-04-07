@@ -1,0 +1,48 @@
+/*-----banner video*/
+/* @media (min-width: 769px) {
+  .banner {
+    background: none;
+  }
+}
+@media (max-width: 768px) {
+  .banner {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .banner video {
+    display: none;
+  }
+} */
+/*-----fin banner video*/
+/*---animation banner ,  logo ---*/
+.banner img {
+  position: relative;
+  display: block;
+  bottom: 0px;
+  animation: moveUp 3s;
+  -webkit-animation: moveUp 3s;
+}
+
+@keyframes moveUp {
+  from {
+    bottom: -300px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+@keyframes moveDownContainer {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/*-------fin de l'animation du logo --*/
+
+/*# sourceMappingURL=banner.css.map */

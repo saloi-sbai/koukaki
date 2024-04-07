@@ -1,0 +1,26 @@
+:root {
+  --rotate: 10s;
+}
+.story__article::after,
+.elemento-con-animacion::after,
+.site-footer ul::after,
+.story h2::after,
+.section-oscars::before,
+#colophon.site-footer::before,
+#colophon.site-footer::after,
+#studio h2::before,
+#studio h2::after {
+  animation: fleur var(--rotate) linear infinite;
+}
+@keyframes fleur {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}

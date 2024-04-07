@@ -1,0 +1,19 @@
+/* animation logo  */
+.banner img {
+  position: relative;
+  display: block;
+  bottom: 0px;
+  animation: versLeHaut 3s;
+}
+
+@keyframes versLeHaut {
+  from {
+    bottom: -300px; /*position de depart */
+  }
+  to {
+    bottom: 0px; /*position finale */
+  }
+}
+/* fin animation logo */
+
+/*# sourceMappingURL=header.css.map */
