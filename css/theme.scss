@@ -1,53 +1,10 @@
 
-/* animation logo  */
-// .banner img {
-//     position: relative;
-//     display: block;
-//     bottom: 0px;
-//     animation: versLeHaut 3s;
-// }
-// @keyframes versLeHaut {
-//     from {
-//         bottom: -300px; /*position de depart */
-//     }
-//     to {
-//         bottom: 0px; /*position finale */
-//     }
-// }
-/* fin animation logo */
 
 
 
-// #story {
-//     @keyframes effet-up {
-//     0% {    transform: translateY(20%);
-//       opacity: 0;
-//     }
-//     100% {
-//       transform: translateY(0);
-//       opacity: 1;
-//     }
-//   }
-// }
 
-/* animation fleure qui tourne*/
-// .fleur {
-//   width: 100px;
-//   height: 100px;
-//   background-image: url('fleur.png');
-//   background-size: cover;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   animation: rotation 5s linear infinite;
-// }
 
-@keyframes rotation {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
+
+
+
+

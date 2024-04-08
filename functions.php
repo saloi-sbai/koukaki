@@ -6,9 +6,8 @@ function theme_enqueue_styles() {
     wp_enqueue_style('header', get_stylesheet_directory_uri() .'/sass/header.css');
     wp_enqueue_style('fleurs', get_stylesheet_directory_uri() . '/sass/fleurs.css');
     wp_enqueue_style('commun', get_stylesheet_directory_uri() . '/sass/commun.css');
-    // wp_enqueue_style('banner', get_stylesheet_directory_uri() . '/sass/banner.css');
-
-    // wp_enqueue_style('section-histoire' ,get_stylesheet_directory_uri().'/sass/sectionHistoire.scss');
+    wp_enqueue_style('oscars', get_stylesheet_directory_uri() . '/sass/oscars.css');
+    
 }
 
 // Get customizer options form parent theme

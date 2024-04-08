@@ -11,3 +11,19 @@ section {
     transform: translate(0, 0);
   }
 }
+
+.section-oscars{
+  opacity: 0;
+  animation: moveUp 3s forwards;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+}
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

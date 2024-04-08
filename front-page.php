@@ -6,7 +6,6 @@ get_header();
 <main id="primary" class="site-main">
     <section class="banner">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-        <?php get_template_part('template-parts/header-video'); ?><!--video--->
     </section>
     <section id="#story" class="story">
         <h2>L'histoire</h2>
@@ -67,6 +66,7 @@ get_header();
         </div>
     </section>
 </main><!-- #main -->
+<?php get_template_part('template-parts/section-oscars'); ?>
 
 <?php
 get_footer();
