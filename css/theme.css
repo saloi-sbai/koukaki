@@ -1,0 +1,137 @@
+/* animation logo  */
+.banner img {
+  position: relative;
+  display: block;
+  bottom: 0px;
+  animation: versLeHaut 3s;
+}
+
+@keyframes versLeHaut {
+  from {
+    bottom: -300px; /*position de depart */
+  }
+  to {
+    bottom: 0px; /*position finale */
+  }
+}
+/* fin animation logo */
+/*----section-oscars------*/
+.section-oscars {
+  position: relative;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+.section-oscars img {
+  height: 100%;
+}
+.section-oscars::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: 4em;
+  top: 0;
+}
+.section-oscars::after {
+  content: url("../assets/images/orchid.png");
+  position: relative;
+  right: -17em;
+  top: -15em;
+}
+
+.oscar_img {
+  width: 279px;
+  height: 129px;
+}
+
+.site-footer::after {
+  visibility: hidden;
+}
+.site-footer::before {
+  visibility: hidden;
+}
+
+.title-oscars {
+  position: relative;
+}
+.title-oscars img {
+  height: 100%;
+}
+.title-oscars h3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 3.2rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 1192px) {
+  .section-oscars h3 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+}
+/*----fin section-oscars------*/
+:root {
+  --rotate: 10s;
+}
+
+.story h2::after {
+  width: 155px;
+  height: 154px;
+}
+
+.story__article::after,
+.elemento-con-animacion::after,
+.site-footer ul::after,
+.story h2::after,
+.section-oscars::before,
+.section-oscars::after,
+#colophon.site-footer::before,
+#colophon.site-footer::after,
+#studio h2::before,
+#studio h2::after {
+  animation: fleur var(--rotate) linear infinite;
+}
+
+@keyframes fleur {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+section {
+  animation: move_up 1s ease;
+}
+
+@keyframes move_up {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.section-oscars {
+  opacity: 0;
+  animation: moveUp 3s forwards;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */

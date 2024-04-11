@@ -1,10 +1,12 @@
-<section class="section-oscars">
-    <h3>
-        <span class="title-oscars fade-in-section">Fleurs d’oranger & chats errants<br /> est nominé aux Oscars Short<br /> Film Animated de 2022 !</span>
-    </h3>
-    <span class="observe-fade-in-section"></span>
+<section id="section-oscars" class="section-oscars">
+    <div class="title-oscars fade-in-section">
+        <img src="<?php echo get_theme_file_uri() . '/assets/images/Bg_oscars.png'; ?>" alt="fond du titre des nominations">
+        <h3>
+            Fleurs d’oranger & chats errants est nominé aux Oscars Short Film Animated de 2022 !
+        </h3>
+    </div>
 
-    <img class="fade-in-section" src="<?php echo get_stylesheet_directory_uri() . '../assets/images/oscars-koukaki.png'; ?>" alt="nomination aux oscars de Koukaki">
-    <span class="observe-fade-in-section"></span>
+
+    <img class="fade-in-section oscar_img" src="<?php echo get_stylesheet_directory_uri() . '../assets/images/oscars-koukaki.png'; ?>" alt="nomination aux oscars de Koukaki">
+
 </section>
-<span class="observe-fade-in-move"></span>

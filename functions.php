@@ -3,10 +3,6 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() .'/css/theme.css');
-    wp_enqueue_style('header', get_stylesheet_directory_uri() .'/sass/header.css');
-    wp_enqueue_style('fleurs', get_stylesheet_directory_uri() . '/sass/fleurs.css');
-    wp_enqueue_style('commun', get_stylesheet_directory_uri() . '/sass/commun.css');
-    wp_enqueue_style('oscars', get_stylesheet_directory_uri() . '/sass/oscars.css');
     
 }
 

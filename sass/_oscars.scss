@@ -1,0 +1,61 @@
+/*----section-oscars------*/
+.section-oscars {
+  position: relative;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 100%;
+  }
+  &::before {
+    content: url("../assets/images/Sunflower.png");
+    position: absolute;
+    left: 4em;
+    top: 0;
+  }
+  &::after {
+    content: url("../assets/images/orchid.png");
+    position: relative;
+    right: -17em;
+    top: -15em;
+  }
+}
+.oscar_img {
+  width: 279px;
+  height: 129px;
+}
+.site-footer {
+  &::after {
+    visibility: hidden;
+  }
+  &::before {
+    visibility: hidden;
+  }
+}
+.title-oscars {
+  position: relative;
+  img {
+    height: 100%;
+  }
+  h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 3.2rem;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1192px) {
+  .section-oscars {
+    h3 {
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+/*----fin section-oscars------*/
