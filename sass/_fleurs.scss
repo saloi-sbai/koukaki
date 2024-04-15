@@ -19,11 +19,4 @@
 #studio h2::after {
   animation: fleur var(--rotate) linear infinite;
 }
-@keyframes fleur {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

@@ -1,0 +1,32 @@
+/*       story et LIEU       */
+.story {
+  #place {
+    position: relative;
+    background-image: url("../assets/images/image_place.png");
+    z-index: -1;
+  }
+}
+#place {
+  .place--big_cloud {
+    position: absolute;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    z-index: 2;
+    height: 122px;
+    top: 70px;
+    right: 90px;
+    transform: translateX(var(--posX));
+  }
+  .place--little_cloud {
+    position: absolute;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    z-index: 2;
+    height: 55px;
+    top: 250px;
+    right: 500px;
+    transform: translateX(var(--posX));
+  }
+}

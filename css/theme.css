@@ -1,20 +1,31 @@
-/* animation logo  */
-.banner img {
+.banner {
   position: relative;
-  display: block;
+  object-fit: contain;
+  height: 800px;
+  background-image: none;
+}
+.banner__background {
+  z-index: -2;
+  opacity: 1;
+  left: auto !important;
+  max-width: 100%;
+  overflow: hidden;
+}
+.banner__video, .banner__background {
+  position: absolute;
   bottom: 0px;
-  animation: versLeHaut 3s;
+  left: 0px;
+  min-width: 1440px !important;
+  animation: banner-move-down 2s 300ms both;
+}
+.banner__logo {
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+  opacity: 1;
+  animation: banner-move-up 2s 300ms both, banner-float 6s 2s infinite ease-in-out;
 }
 
-@keyframes versLeHaut {
-  from {
-    bottom: -300px; /*position de depart */
-  }
-  to {
-    bottom: 0px; /*position finale */
-  }
-}
-/* fin animation logo */
 /*----section-oscars------*/
 .section-oscars {
   position: relative;
@@ -96,6 +107,141 @@
   animation: fleur var(--rotate) linear infinite;
 }
 
+:root {
+  --rotate: 15s;
+  --posX: 0;
+}
+
+.hiden {
+  opacity: 0;
+}
+
+#page {
+  position: relative;
+}
+
+section {
+  animation: move_up 1s ease;
+}
+
+/*       titre H2 et H3      */
+.story #characters {
+  margin: 6em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.story > h2 {
+  color: transparent;
+  height: 202px;
+  z-index: -1;
+  width: 100%;
+}
+.story > h2 span {
+  position: absolute;
+  color: #FFF5E9;
+  opacity: 0;
+  z-index: 4;
+  top: 100px;
+}
+
+.studio > h2 {
+  color: transparent;
+  height: 202px;
+  z-index: -1;
+  width: 100%;
+}
+.studio > h2 span {
+  position: absolute;
+  color: #FFF5E9;
+  opacity: 0;
+  z-index: 4;
+  top: 100px;
+}
+
+#characters > h3 {
+  color: transparent;
+  height: 202px;
+  z-index: -1;
+  position: relative;
+  width: 40%;
+}
+#characters > h3 span {
+  width: 100%;
+}
+#characters span {
+  position: absolute;
+  color: #FFF5E9;
+  opacity: 0;
+  z-index: 4;
+  top: 100px;
+}
+
+#place h3 {
+  color: transparent;
+  height: 202px;
+  z-index: 4;
+  position: relative;
+  width: 40%;
+}
+#place span {
+  position: absolute;
+  color: #FFF5E9;
+  opacity: 0;
+  z-index: 4;
+  top: 100px;
+  width: 100%;
+}
+
+.section-oscars {
+  opacity: 0;
+  animation: oscars-moveUp 3s forwards;
+}
+
+.animTitle {
+  animation: animTitle 1s 1s forwards;
+}
+
+/*       story et LIEU       */
+.story #place {
+  position: relative;
+  background-image: url("../assets/images/image_place.png");
+  z-index: -1;
+}
+
+#place .place--big_cloud {
+  position: absolute;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  z-index: 2;
+  height: 122px;
+  top: 70px;
+  right: 90px;
+  transform: translateX(var(--posX));
+}
+#place .place--little_cloud {
+  position: absolute;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  z-index: 2;
+  height: 55px;
+  top: 250px;
+  right: 500px;
+  transform: translateX(var(--posX));
+}
+
+@keyframes oscars-moveUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes fleur {
   from {
     transform: rotate(0deg);
@@ -104,33 +250,61 @@
     transform: rotate(360deg);
   }
 }
-section {
-  animation: move_up 1s ease;
-}
-
-@keyframes move_up {
+@keyframes animTitle {
   0% {
+    transform: translate3d(-50%, 50%, 0);
     opacity: 0;
-    transform: translate(0, 100px);
   }
   100% {
+    transform: translate3d(-50%, -50%, 0);
     opacity: 1;
-    transform: translate(0, 0);
   }
 }
-.section-oscars {
-  opacity: 0;
-  animation: moveUp 3s forwards;
-}
-
-@keyframes moveUp {
+@keyframes banner-move-up {
   from {
-    transform: translateY(100px);
+    transform: translateY(600px);
     opacity: 0;
   }
   to {
     transform: translateY(0);
-    opacity: 1;
+  }
+}
+@keyframes banner-float {
+  0% {
+    transform: translate3d(6px, 6px, 0);
+  }
+  12% {
+    transform: translate3d(0px, 6px, 0);
+  }
+  24% {
+    transform: translate3d(6px, -4px, 0);
+  }
+  36% {
+    transform: translate3d(6px, 0px, 0);
+  }
+  48% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  72% {
+    transform: translate3d(-8px, 6px, 0);
+  }
+  84% {
+    transform: translate3d(-4px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(6px, 6px, 0);
+  }
+}
+/* animation logo  */
+@keyframes versLeHaut {
+  from {
+    bottom: -300px; /*position de depart */
+  }
+  to {
+    bottom: 0px; /*position finale */
   }
 }
 

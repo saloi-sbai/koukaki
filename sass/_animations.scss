@@ -1,0 +1,125 @@
+// @keyframes move_up {
+//   0% {
+//     opacity: 0;
+//     transform: translate(0, 100px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translate(0, 0);
+//   }
+// }
+
+// section oscars
+@keyframes oscars-moveUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// animation fleurs
+@keyframes fleur {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animTitle {
+  0% {
+    transform: translate3d(-50%, 50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
+}
+
+// Animations banner
+// @keyframes banner-move-down {
+//   from {
+//     transform: translateY(-300px);
+//     opacity: 0;
+//   }
+
+//   to {
+//     transform: translateY(0);
+//     visibility: visible;
+//   }
+// }
+
+@keyframes banner-move-up {
+  from {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+// animation flotement logo
+@keyframes banner-float {
+  0% {
+    transform: translate3d(6px, 6px, 0);
+  }
+
+  12% {
+    transform: translate3d(0px, 6px, 0);
+  }
+
+  24% {
+    transform: translate3d(6px, -4px, 0);
+  }
+
+  36% {
+    transform: translate3d(6px, 0px, 0);
+  }
+
+  48% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+
+  60% {
+    transform: translate3d(0px, -4px, 0);
+  }
+
+  72% {
+    transform: translate3d(-8px, 6px, 0);
+  }
+
+  84% {
+    transform: translate3d(-4px, 0px, 0);
+  }
+
+  100% {
+    transform: translate3d(6px, 6px, 0);
+  }
+}
+
+/* animation logo  */
+// .banner img {
+//     position: relative;
+//     display: block;
+//     bottom: 0px;
+//     animation: versLeHaut 3s;
+// }
+
+// animation fad in des sections
+@keyframes versLeHaut {
+    from {
+        bottom: -300px; /*position de depart */
+    }
+    to {
+        bottom: 0px; /*position finale */
+    }
+}
+
