@@ -18,6 +18,16 @@
   min-width: 1440px !important;
   animation: banner-move-down 2s 300ms both;
 }
+@keyframes banner-move-down {
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
 .banner__logo {
   position: sticky;
   top: 80px;
@@ -25,7 +35,45 @@
   opacity: 1;
   animation: banner-move-up 2s 300ms both, banner-float 6s 2s infinite ease-in-out;
 }
+@keyframes banner-move-up {
+  from {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
+@keyframes banner-float {
+  0% {
+    transform: translate3d(6px, 6px, 0);
+  }
+  12% {
+    transform: translate3d(0px, 6px, 0);
+  }
+  24% {
+    transform: translate3d(6px, -4px, 0);
+  }
+  36% {
+    transform: translate3d(6px, 0px, 0);
+  }
+  48% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  72% {
+    transform: translate3d(-8px, 6px, 0);
+  }
+  84% {
+    transform: translate3d(-4px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(6px, 6px, 0);
+  }
+}
 /*----section-oscars------*/
 .section-oscars {
   position: relative;
@@ -78,6 +126,21 @@
   text-align: left;
 }
 
+.section-oscars {
+  opacity: 0;
+  animation: oscars-moveUp 3s forwards;
+}
+
+@keyframes oscars-moveUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1192px) {
   .section-oscars h3 {
     font-size: 2.8rem;
@@ -107,12 +170,20 @@
   animation: fleur var(--rotate) linear infinite;
 }
 
+@keyframes fleur {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 :root {
   --rotate: 15s;
   --posX: 0;
 }
 
-.hiden {
+.hidden {
   opacity: 0;
 }
 
@@ -124,7 +195,17 @@ section {
   animation: move_up 1s ease;
 }
 
-/*       titre H2 et H3      */
+@keyframes move_up {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/************* titre H2 et H3 ***************/
 .story #characters {
   margin: 6em;
   display: flex;
@@ -193,16 +274,25 @@ section {
   width: 100%;
 }
 
-.section-oscars {
-  opacity: 0;
-  animation: oscars-moveUp 3s forwards;
-}
-
 .animTitle {
   animation: animTitle 1s 1s forwards;
 }
 
+@keyframes animTitle {
+  0% {
+    transform: translate3d(-50%, 50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
+}
 /*       story et LIEU       */
+:root {
+  --posX: 0;
+}
+
 .story #place {
   position: relative;
   background-image: url("../assets/images/image_place.png");
@@ -232,80 +322,40 @@ section {
   transform: translateX(var(--posX));
 }
 
-@keyframes oscars-moveUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fleur {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animTitle {
-  0% {
-    transform: translate3d(-50%, 50%, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(-50%, -50%, 0);
-    opacity: 1;
-  }
-}
-@keyframes banner-move-up {
-  from {
-    transform: translateY(600px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes banner-float {
-  0% {
-    transform: translate3d(6px, 6px, 0);
-  }
-  12% {
-    transform: translate3d(0px, 6px, 0);
-  }
-  24% {
-    transform: translate3d(6px, -4px, 0);
-  }
-  36% {
-    transform: translate3d(6px, 0px, 0);
-  }
-  48% {
-    transform: translate3d(-4px, -6px, 0);
-  }
-  60% {
-    transform: translate3d(0px, -4px, 0);
-  }
-  72% {
-    transform: translate3d(-8px, 6px, 0);
-  }
-  84% {
-    transform: translate3d(-4px, 0px, 0);
-  }
-  100% {
-    transform: translate3d(6px, 6px, 0);
-  }
-}
 /* animation logo  */
-@keyframes versLeHaut {
-  from {
-    bottom: -300px; /*position de depart */
-  }
-  to {
-    bottom: 0px; /*position finale */
-  }
+/*      SWIPER      */
+.story #characters {
+  position: relative;
+  margin-bottom: 0 !important;
+  z-index: 40;
+}
+.story #characters div {
+  flex: none;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 420px;
+  opacity: 1;
+  margin-bottom: 7em;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide figure {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -11,9 +11,22 @@
 #page {
   position: relative;
 }
+
+// animation fad in sur toutes les sections
 section {
   animation: move_up 1s ease;
 }
+@keyframes move_up {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
 
 $color_1: transparent;
 $color_2: #FFF5E9;
@@ -92,10 +105,7 @@ $color_2: #FFF5E9;
 	}
 }
 
-.section-oscars{
-  opacity: 0;
-  animation: oscars-moveUp 3s forwards;
-}
+
 
 
 

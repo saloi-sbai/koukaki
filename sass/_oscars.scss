@@ -48,6 +48,21 @@
     text-align: left;
   }
 }
+.section-oscars{
+  opacity: 0;
+  animation: oscars-moveUp 3s forwards;
+}
+// animation oscars
+@keyframes oscars-moveUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 @media screen and (max-width: 1192px) {
   .section-oscars {

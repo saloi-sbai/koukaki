@@ -21,6 +21,17 @@
     min-width: 1440px !important;
     animation: banner-move-down 2s 300ms both;
   }
+  @keyframes banner-move-down {
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
 
   &__logo {
     position: sticky;
@@ -29,5 +40,54 @@
     opacity: 1;
     animation: banner-move-up 2s 300ms both,
       banner-float 6s 2s infinite ease-in-out;
+  }
+  @keyframes banner-move-up {
+  from {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+}
+
+// animation flotement logo
+@keyframes banner-float {
+  0% {
+    transform: translate3d(6px, 6px, 0);
+  }
+
+  12% {
+    transform: translate3d(0px, 6px, 0);
+  }
+
+  24% {
+    transform: translate3d(6px, -4px, 0);
+  }
+
+  36% {
+    transform: translate3d(6px, 0px, 0);
+  }
+
+  48% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+
+  60% {
+    transform: translate3d(0px, -4px, 0);
+  }
+
+  72% {
+    transform: translate3d(-8px, 6px, 0);
+  }
+
+  84% {
+    transform: translate3d(-4px, 0px, 0);
+  }
+
+  100% {
+    transform: translate3d(6px, 6px, 0);
   }
 }
