@@ -16,6 +16,7 @@
 #colophon.site-footer::before,
 #colophon.site-footer::after,
 #studio h2::before,
+.modal ::after,
 #studio h2::after {
   animation: fleur var(--rotate) linear infinite;
 }

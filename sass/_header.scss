@@ -3,15 +3,8 @@
   position: relative;
   object-fit: contain;
   height: 800px;
-  background-image: none;
-
-  &__background {
-    z-index: -2;
-    opacity: 1;
-    left: auto !important;
-    max-width: 100%;
-    overflow: hidden;
-  }
+  background-image: url(../assets/images/banner.png);
+  // overflow: hidden;
 
   &__video,
   &__background {
@@ -22,35 +15,36 @@
     animation: banner-move-down 2s 300ms both;
   }
   @keyframes banner-move-down {
-  from {
-    transform: translateY(-300px);
-    opacity: 0;
-  }
+    from {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
 
-  to {
-    transform: translateY(0);
-    visibility: visible;
+    to {
+      transform: translateY(0);
+      visibility: visible;
+    }
   }
-}
 
   &__logo {
     position: sticky;
     top: 80px;
-    z-index: 10;
+    // z-index: 10;
     opacity: 1;
     animation: banner-move-up 2s 300ms both,
       banner-float 6s 2s infinite ease-in-out;
   }
   @keyframes banner-move-up {
-  from {
-    transform: translateY(600px);
-    opacity: 0;
-  }
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
 
-  to {
-    transform: translateY(0);
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
-}
 }
 
 // animation flotement logo

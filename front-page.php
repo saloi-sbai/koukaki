@@ -5,7 +5,7 @@ get_header();
 
 <main id="primary" class="site-main">
     <section class="banner">
-        <img class="banner__background" src="<?php echo get_theme_file_uri() . '/assets/images/banner.png'; ?>" alt="">
+    
         <video class="banner__video" width="1440" autoplay="autoplay" muted="" loop="infinite">
             <source src="<?php echo get_theme_file_uri() . './assets/videos/koukaki.mp4'; ?>" type="video/mp4">
         </video>

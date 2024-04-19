@@ -94,7 +94,7 @@ function monScript() {
     }
   });
 
-  // Initialize Swiper
+  // Initialiser Swiper
   var swiper = new Swiper(".swiper-container", {
     spaceBetween: 60,
     speed: 1000,
@@ -120,7 +120,29 @@ function monScript() {
   });
 
   console.log("Swiper initialisé !");
+
+// menu de navigation 
+  (function ($) {
+    $(".modal-open").click(function () {
+      console.log("modal-trigger cliqué");
+      $(".modal__content").animate(
+        { height: "toggle", opacity: "toggle" },
+        1000
+      );
+      $(".modal__content").toggleClass("open");
+      $(".modal__burger").toggleClass("close");
+    });
+    $("a").click(function () {
+      if ($(".modal__content").hasClass("open")) {
+        $(".modal__content").animate(
+          { height: "toggle", opacity: "toggle" },
+          1000
+        );
+        $(".modal__content").removeClass("open");
+        $(".modal__burger").removeClass("close");
+      }
+    });
+  })(jQuery);
+
+  
 }
-
-
-
