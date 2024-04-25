@@ -145,6 +145,19 @@
     line-height: 3rem;
   }
 }
+/*  **********************************  */
+@media all and (max-width: 700px) {
+  .characters__title {
+    font-size: 1.6rem;
+  }
+  .studio__title,
+  .section-oscars h3 {
+    font-size: 2.5rem;
+  }
+  .section-oscars {
+    overflow: hidden;
+  }
+}
 :root {
   --rotate: 10s;
 }
