@@ -3,6 +3,7 @@
   object-fit: contain;
   height: 800px;
   background-image: url(../assets/images/banner.png);
+  overflow: hidden;
 }
 .banner__video, .banner__background {
   position: absolute;
