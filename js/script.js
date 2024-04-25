@@ -96,21 +96,21 @@ function monScript() {
 
   // Initialiser Swiper
   var swiper = new Swiper(".swiper-container", {
-    spaceBetween: 60,
-    speed: 1000,
+    spaceBetween: 60, // espacement entre les slides en px
+    speed: 1000, // la vitesse de transition entre les slides 
     autoplay: {
       delay: 250,
     },
-    effect: "coverflow",
+    effect: "coverflow", // l'effet de transition  entre les slides
     grabCursor: true,
     centeredSlides: true,
-    loop: true,
-    slidesPerView: 3,
+    loop: true, // activer la  repetition des slides à l'infini
+    slidesPerView: 3, // nombre de slide a afficher  parallèlement
     coverflowEffect: {
       rotate: 60,
       stretch: 0,
-      depth: 100,
-      modifier: 1,
+      depth: 100, // profondeur de slides
+      modifier: 1, // modificateur (précision du calcul de l'effet)
       slideShadows: false,
     },
     autoplay: {
@@ -121,7 +121,8 @@ function monScript() {
 
   console.log("Swiper initialisé !");
 
-// menu de navigation 
+
+  // menu de navigation
   (function ($) {
     $(".modal-open").click(function () {
       console.log("modal-trigger cliqué");
@@ -144,5 +145,4 @@ function monScript() {
     });
   })(jQuery);
 
-  
 }

@@ -4,8 +4,7 @@ function theme_enqueue_styles()
 {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array('parent-style'), time());
-    // wp_enqueue_style('modal-style', get_stylesheet_directory_uri() . '/css/modal.css', array('parent-style'), time());
-
+    
     wp_enqueue_script( 'jquery' ); 
 
     wp_enqueue_script('mon-script', get_theme_file_uri() . './js/script.js');

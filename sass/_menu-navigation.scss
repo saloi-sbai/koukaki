@@ -1,6 +1,6 @@
-/* ************** */
-/*   Navigation   */
-/* ************** */
+
+/***********   Navigation  *************/
+
 .main-navigation.toggled ul {
   display: flex !important;
 }
@@ -33,7 +33,6 @@
     transition: all 0.3s ease-in-out;
   }
 
-  /* ---- AJOUT 7 ----  */
   &.close {
     .line:nth-child(2) {
       opacity: 0;
@@ -49,9 +48,9 @@
   }
 }
 
-/* ************* */
-/*     MODAL     */
-/* ************* */
+
+/************** MODAL ***************/
+
 .modal {
   font-family: "Roboto Mono", monospace;
   font-size: 0.4rem;
@@ -98,7 +97,6 @@
       -moz-filter: drop-shadow(0px 0px 5px #ff5c00);
     }
 
-    /* ---- AJOUT 10 ----  */
     &--footer {
       position: absolute;
       left: 50%;
@@ -107,10 +105,8 @@
     }
   }
 
-  /* ---- AJOUT 8 ----  */
-  /* *************** */
-  /*   CAT - MODAL   */
-  /* *************** */
+  /**********   CAT - MODAL   *************/
+  
   &__content--story::before {
     content: url("../assets/images/Kawaneko.png");
     position: absolute;
@@ -138,10 +134,7 @@
     /* transform: scale(0.7); */
   }
 
-  /* ---- AJOUT 9 ----  */
-  /* ****************** */
-  /*   FLOWER - MODAL   */
-  /* ****************** */
+  /*************   FLOWER - MODAL   **************/
   &__content::after {
     content: url("../assets/images/orchid.png");
     position: absolute;
@@ -181,10 +174,10 @@
   }
 }
 
-/*  **********************************  */
 /*    Media query : max-width: 700px    */
-/*  **********************************  */
+
 @media all and (max-width: 700px) {
+  
   .main-navigation {
     height: 80px;
   }
@@ -193,7 +186,6 @@
     display: flex !important;
   }
 
-  /* ---- AJOUT 8 ----  */
   /* CAT - MODAL */
   .modal__content--story::before,
   .modal__content--place::before,

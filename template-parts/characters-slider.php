@@ -12,7 +12,6 @@ $characters_query = new WP_Query($args);
     <h3><span class="characters__title hidden">Les personnages</span></h3>
     <!-- Slider main container -->
     <div class="swiper-container">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <?php
             while ($characters_query->have_posts()) {

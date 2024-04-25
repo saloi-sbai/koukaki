@@ -1,4 +1,4 @@
-/*----section-oscars------*/
+
 .section-oscars {
   position: relative;
   padding: 150px 0 50px;
@@ -64,6 +64,8 @@
   }
 }
 
+/* -------------------- Responsive ----------------------- */
+
 @media screen and (max-width: 1192px) {
   .section-oscars {
     h3 {
@@ -73,4 +75,4 @@
   }
 }
 
-/*----fin section-oscars------*/
+

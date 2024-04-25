@@ -67,7 +67,6 @@
     transform: translate3d(6px, 6px, 0);
   }
 }
-/*----section-oscars------*/
 .section-oscars {
   position: relative;
   padding: 150px 0 50px;
@@ -140,7 +139,6 @@
     line-height: 3rem;
   }
 }
-/*----fin section-oscars------*/
 :root {
   --rotate: 10s;
 }
@@ -186,7 +184,7 @@
 }
 
 section {
-  animation: move_up 1s ease;
+  animation: move_up 3s ease;
 }
 
 @keyframes move_up {
@@ -352,9 +350,7 @@ section {
   object-fit: cover;
 }
 
-/* ************** */
-/*   Navigation   */
-/* ************** */
+/***********   Navigation  *************/
 .main-navigation.toggled ul {
   display: flex !important;
 }
@@ -377,7 +373,6 @@ section {
   top: 0;
   right: 5em;
   cursor: pointer;
-  /* ---- AJOUT 7 ----  */
 }
 .modal__burger .line {
   height: 2px;
@@ -397,9 +392,7 @@ section {
   transform: rotate(-45deg) translate3d(8px, -6px, 0);
 }
 
-/* ************* */
-/*     MODAL     */
-/* ************* */
+/************** MODAL ***************/
 .modal {
   font-family: "Roboto Mono", monospace;
   font-size: 0.4rem;
@@ -408,14 +401,8 @@ section {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  /* ---- AJOUT 8 ----  */
-  /* *************** */
-  /*   CAT - MODAL   */
-  /* *************** */
-  /* ---- AJOUT 9 ----  */
-  /* ****************** */
-  /*   FLOWER - MODAL   */
-  /* ****************** */
+  /**********   CAT - MODAL   *************/
+  /*************   FLOWER - MODAL   **************/
 }
 .modal h2,
 .modal li > a {
@@ -428,7 +415,6 @@ section {
   background: #fff5e9;
   font-size: 3em;
   display: none;
-  /* ---- AJOUT 10 ----  */
 }
 .modal .modal__content--logo {
   margin: 40px;
@@ -515,9 +501,7 @@ section {
   bottom: -23.5em;
 }
 
-/*  **********************************  */
 /*    Media query : max-width: 700px    */
-/*  **********************************  */
 @media all and (max-width: 700px) {
   .main-navigation {
     height: 80px;
@@ -525,7 +509,6 @@ section {
   .main-navigation ul {
     display: flex !important;
   }
-  /* ---- AJOUT 8 ----  */
   /* CAT - MODAL */
   .modal__content--story::before,
   .modal__content--place::before,
