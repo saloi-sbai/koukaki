@@ -6,7 +6,7 @@ get_header();
 <main id="primary" class="site-main">
     <section class="banner">
     
-        <video class="banner__video" width="1440" autoplay="autoplay" muted="" loop="infinite">
+        <video class="banner__video" autoplay muted loop>
             <source src="<?php echo get_theme_file_uri() . './assets/videos/koukaki.mp4'; ?>" type="video/mp4">
         </video>
         <img class="banner__logo" src="<?php echo get_theme_file_uri() . './assets/images/logo.png'; ?>" alt="Logo fleurs d'oranger & chats errants">
