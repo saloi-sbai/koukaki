@@ -145,8 +145,8 @@
     line-height: 3rem;
   }
 }
-/*  **********************************  */
-@media all and (max-width: 700px) {
+/******************** Media query : max-width: 700px ********************/
+@media all and (max-width: 894px) {
   .characters__title {
     font-size: 1.6rem;
   }
@@ -156,6 +156,9 @@
   }
   .section-oscars {
     overflow: hidden;
+  }
+  .studio__title {
+    font-size: 2.5rem;
   }
 }
 :root {
@@ -333,7 +336,6 @@ section {
   transform: translateX(var(--posX));
 }
 
-/* animation logo  */
 /*      SWIPER      */
 .story #characters {
   position: relative;
