@@ -1,10 +1,14 @@
 // Banner
+
+.site-main {
+  overflow-x: clip;
+}
 .banner {
   position: relative;
   object-fit: contain;
   height: 800px;
   background-image: url(../assets/images/banner.png);
-  overflow: hidden;
+  // overflow: hidden;
 
   &__video,
   &__background {
@@ -16,7 +20,7 @@
   }
   @keyframes banner-move-down {
     from {
-      transform: translateY(-200px);
+      transform: translateY(-300px);
       opacity: 0;
     }
 
@@ -29,7 +33,7 @@
   &__logo {
     position: sticky;
     top: 80px;
-    // z-index: 10;
+    z-index: 10;
     opacity: 1;
     animation: banner-move-up 2s 300ms both,
       banner-float 6s 2s infinite ease-in-out;

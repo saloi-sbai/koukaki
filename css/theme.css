@@ -1,9 +1,12 @@
+.site-main {
+  overflow-x: clip;
+}
+
 .banner {
   position: relative;
   object-fit: contain;
   height: 800px;
   background-image: url(../assets/images/banner.png);
-  overflow: hidden;
 }
 .banner__video, .banner__background {
   position: absolute;
@@ -13,7 +16,7 @@
 }
 @keyframes banner-move-down {
   from {
-    transform: translateY(-200px);
+    transform: translateY(-300px);
     opacity: 0;
   }
   to {
@@ -24,6 +27,7 @@
 .banner__logo {
   position: sticky;
   top: 80px;
+  z-index: 10;
   opacity: 1;
   animation: banner-move-up 2s 300ms both, banner-float 6s 2s infinite ease-in-out;
 }
@@ -75,6 +79,7 @@
   gap: 40px 0;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .section-oscars img {
   height: 100%;
