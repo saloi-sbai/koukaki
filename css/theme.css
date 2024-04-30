@@ -150,22 +150,6 @@
     line-height: 3rem;
   }
 }
-/******************** Media query : max-width: 700px ********************/
-@media all and (max-width: 894px) {
-  .characters__title {
-    font-size: 1.6rem;
-  }
-  .studio__title,
-  .section-oscars h3 {
-    font-size: 2.5rem;
-  }
-  .section-oscars {
-    overflow: hidden;
-  }
-  .studio__title {
-    font-size: 2.5rem;
-  }
-}
 :root {
   --rotate: 10s;
 }
@@ -210,7 +194,9 @@
   position: relative;
 }
 
-section {
+.story,
+.studio,
+#characters {
   animation: move_up 3s ease;
 }
 
@@ -239,7 +225,7 @@ section {
 }
 .story > h2 span {
   position: absolute;
-  color: #FFF5E9;
+  color: #fff5e9;
   opacity: 0;
   z-index: 4;
   top: 100px;
@@ -253,7 +239,7 @@ section {
 }
 .studio > h2 span {
   position: absolute;
-  color: #FFF5E9;
+  color: #fff5e9;
   opacity: 0;
   z-index: 4;
   top: 100px;
@@ -271,7 +257,7 @@ section {
 }
 #characters span {
   position: absolute;
-  color: #FFF5E9;
+  color: #fff5e9;
   opacity: 0;
   z-index: 4;
   top: 100px;
@@ -286,13 +272,32 @@ section {
 }
 #place span {
   position: absolute;
-  color: #FFF5E9;
+  color: #fff5e9;
   opacity: 0;
   z-index: 4;
   top: 100px;
   width: 100%;
 }
 
+/******************** Media query : max-width: 894px ********************/
+@media all and (max-width: 894px) {
+  .characters__title {
+    font-size: 1.6rem;
+  }
+  .studio__title,
+  .section-oscars h3 {
+    font-size: 2.5rem;
+  }
+  .section-oscars {
+    overflow: hidden;
+  }
+  .studio__title {
+    font-size: 2.5rem;
+  }
+  .banner__video {
+    display: none;
+  }
+}
 .animTitle {
   animation: animTitle 1s 1s forwards;
 }

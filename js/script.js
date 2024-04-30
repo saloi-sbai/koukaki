@@ -97,7 +97,7 @@ function monScript() {
   // Initialiser Swiper
   var swiper = new Swiper(".swiper-container", {
     spaceBetween: 60, // espacement entre les slides en px
-    speed: 1000, // la vitesse de transition entre les slides 
+    speed: 1000, // la vitesse de transition entre les slides
     autoplay: {
       delay: 250,
     },
@@ -121,7 +121,6 @@ function monScript() {
 
   console.log("Swiper initialisé !");
 
-
   // menu de navigation
   (function ($) {
     $(".modal-open").click(function () {
@@ -144,5 +143,4 @@ function monScript() {
       }
     });
   })(jQuery);
-
 }

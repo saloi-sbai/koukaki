@@ -1,4 +1,3 @@
-
 :root {
   --rotate: 15s;
   --posX: 0;
@@ -13,8 +12,10 @@
 }
 
 // animation fad in sur toutes les sections
-section {
-  animation: move_up 3s ease; 
+.story,
+.studio,
+#characters {
+  animation: move_up 3s ease;
 }
 @keyframes move_up {
   0% {
@@ -27,86 +28,99 @@ section {
   }
 }
 
-
 $color_1: transparent;
-$color_2: #FFF5E9;
+$color_2: #fff5e9;
 
 /************* titre H2 et H3 ***************/
 .story {
-	#characters {
-		margin: 6em;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-	>h2 {
-		color: $color_1;
-		height: 202px;
-		z-index: -1;
-		width: 100%;
-		span {
-			position: absolute;
-			color: $color_2;
-			opacity: 0;
-			z-index: 4;
-			top: 100px;
-		}
-	}
+  #characters {
+    margin: 6em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  > h2 {
+    color: $color_1;
+    height: 202px;
+    z-index: -1;
+    width: 100%;
+    span {
+      position: absolute;
+      color: $color_2;
+      opacity: 0;
+      z-index: 4;
+      top: 100px;
+    }
+  }
 }
 .studio {
-	>h2 {
-		color: $color_1;
-		height: 202px;
-		z-index: -1;
-		width: 100%;
-		span {
-			position: absolute;
-			color: $color_2;
-			opacity: 0;
-			z-index: 4;
-			top: 100px;
-		}
-	}
+  > h2 {
+    color: $color_1;
+    height: 202px;
+    z-index: -1;
+    width: 100%;
+    span {
+      position: absolute;
+      color: $color_2;
+      opacity: 0;
+      z-index: 4;
+      top: 100px;
+    }
+  }
 }
 #characters {
-	>h3 {
-		color: $color_1;
-		height: 202px;
-		z-index: -1;
-		position: relative;
-		width: 40%;
-		span {
-			width: 100%;
-		}
-	}
-	span {
-		position: absolute;
-		color: $color_2;
-		opacity: 0;
-		z-index: 4;
-		top: 100px;
-	}
+  > h3 {
+    color: $color_1;
+    height: 202px;
+    z-index: -1;
+    position: relative;
+    width: 40%;
+    span {
+      width: 100%;
+    }
+  }
+  span {
+    position: absolute;
+    color: $color_2;
+    opacity: 0;
+    z-index: 4;
+    top: 100px;
+  }
 }
 #place {
-	h3 {
-		color: $color_1;
-		height: 202px;
-		z-index: 4;
-		position: relative;
-		width: 40%;
-	}
-	span {
-		position: absolute;
-		color: $color_2;
-		opacity: 0;
-		z-index: 4;
-		top: 100px;
-		width: 100%;
-	}
+  h3 {
+    color: $color_1;
+    height: 202px;
+    z-index: 4;
+    position: relative;
+    width: 40%;
+  }
+  span {
+    position: absolute;
+    color: $color_2;
+    opacity: 0;
+    z-index: 4;
+    top: 100px;
+    width: 100%;
+  }
 }
 
-
-
-
-
-
+/******************** Media query : max-width: 894px ********************/
+@media all and (max-width: 894px) {
+  .characters__title {
+    font-size: 1.6rem;
+  }
+  .studio__title,
+  .section-oscars h3 {
+    font-size: 2.5rem;
+  }
+  .section-oscars {
+    overflow: hidden;
+  }
+  .studio__title {
+    font-size: 2.5rem;
+  }
+  .banner__video {
+    display: none;
+  }
+}

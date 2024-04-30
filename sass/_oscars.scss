@@ -24,9 +24,6 @@
   }
 
   h3 {
-    // position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
     background: url("../assets/images/Bg_oscars.png") no-repeat center center;
     line-height: 3.2rem;
     text-align: left;
@@ -86,19 +83,4 @@
   }
 }
 
-/******************** Media query : max-width: 700px ********************/
-@media all and (max-width: 894px) {
-  .characters__title {
-    font-size: 1.6rem;
-  }
-  .studio__title,
-  .section-oscars h3 {
-    font-size: 2.5rem;
-  }
-  .section-oscars {
-    overflow: hidden;
-  }
-  .studio__title {
-    font-size: 2.5rem;
-  }
-}
+

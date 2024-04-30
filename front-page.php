@@ -5,8 +5,8 @@ get_header();
 
 <main id="primary" class="site-main">
     <section class="banner">
-    
-        <video class="banner__video" autoplay muted loop>
+
+        <video class="banner__video" width="1440" autoplay muted loop>
             <source src="<?php echo get_theme_file_uri() . './assets/videos/koukaki.mp4'; ?>" type="video/mp4">
         </video>
         <img class="banner__logo" src="<?php echo get_theme_file_uri() . './assets/images/logo.png'; ?>" alt="Logo fleurs d'oranger & chats errants">
@@ -21,7 +21,7 @@ get_header();
         // include_once ( 'template-parts/characters-slider.php' ); 
         get_template_part('template-parts/characters', 'slider');
         ?>
-        
+
         <article id="place">
             <!-- rajouts des images du nuages et un span -->
             <img class="place--big_cloud" src="<?php echo get_theme_file_uri() . '/assets/images/big_cloud.png'; ?>" alt="gros nuage">
